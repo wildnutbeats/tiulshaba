@@ -21,6 +21,24 @@ export default function Home() {
         </Link>
       </section>
 
+      {/* GOOGLE NEWS LINK FORM */}
+      <section className="max-w-4xl mx-auto text-center space-y-4">
+        <form id="carouselForm" style={{ marginTop: "40px" }}>
+          <input
+            type="text"
+            id="newsLink"
+            name="newsLink"
+            placeholder="Paste Google News link"
+            style={{ padding: "10px", width: "300px" }}
+            required
+          />
+          <button type="submit" style={{ padding: "10px 20px", marginLeft: "10px" }}>
+            Generate Carousel
+          </button>
+        </form>
+        <div id="response" style={{ marginTop: "30px" }}></div>
+      </section>
+
       {/* FEATURES */}
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
         <div className="space-y-4">
