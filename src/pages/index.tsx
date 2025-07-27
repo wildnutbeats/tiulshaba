@@ -14,7 +14,7 @@ export default function Home() {
           Build carousels, reels, captions & more in one click.
         </p>
         <Link
-          href="https://www.canva.com/oauth/authorize?client_id=OC-AZfa-e0cYz3b&redirect_uri=https%3A%2F%2F10xspeed.in%2Frest%2Foauth2-credential%2Fcallback&response_type=code&scope=openid"
+          href={`https://www.canva.com/apps/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CANVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_CANVA_REDIRECT_URI}`}
           className="inline-block bg-black text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-gray-800"
         >
           Get Started
@@ -68,7 +68,7 @@ export default function Home() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <Link
-          href="https://www.canva.com/oauth/authorize?client_id=YOUR_CLIENT_ID_HERE&redirect_uri=https%3A%2F%2F10xspeed.in%2Frest%2Foauth2-credential%2Fcallback&response_type=code&scope=openid"
+          href={`https://www.canva.com/apps/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CANVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_CANVA_REDIRECT_URI}`}
           className="inline-block bg-blue-600 text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-blue-700"
         >
           Start your Free Trial
