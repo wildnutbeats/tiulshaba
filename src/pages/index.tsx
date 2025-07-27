@@ -1,129 +1,52 @@
-'use client';
-
-import Link from 'next/link';
-import { useEffect } from 'react';
+import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
-  useEffect(() => {
-    const scrollToForm = () => {
-      const formSection = document.getElementById("carouselForm");
-      if (formSection) {
-        formSection.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    const getStartedBtn = document.getElementById("getStartedBtn");
-    const trialBtn = document.getElementById("trialBtn");
-
-    if (getStartedBtn) getStartedBtn.onclick = scrollToForm;
-    if (trialBtn) trialBtn.onclick = scrollToForm;
-  }, []);
-
   return (
-    <main className="bg-white text-gray-900 px-6 md:px-12 py-16 space-y-16">
-      {/* HERO */}
-      <section className="max-w-4xl mx-auto text-center space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Fastest AI-powered content engine
-          <br />
-          for Instagram & LinkedIn
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-600">
-          Build carousels, reels, captions & more in one click.
-        </p>
-        <button
-          id="getStartedBtn"
-          className="inline-block bg-black text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-gray-800"
-        >
-          Get Started
-        </button>
-      </section>
+    <>
+      <Head>
+        <title>10xSpeed – AI Content Engine</title>
+      </Head>
 
-      {/* GOOGLE NEWS LINK FORM */}
-      <section className="max-w-4xl mx-auto text-center space-y-4">
-        <form id="carouselForm" style={{ marginTop: "40px" }}>
-          <input
-            type="text"
-            id="newsLink"
-            name="newsLink"
-            placeholder="Paste Google News link"
-            style={{ padding: "10px", width: "300px" }}
-            required
-          />
-          <button
-            type="submit"
-            style={{ padding: "10px 20px", marginLeft: "10px" }}
-          >
-            Generate Carousel
-          </button>
-        </form>
-        <div id="response" style={{ marginTop: "30px" }}></div>
-      </section>
+      <main className="min-h-screen bg-white text-black px-6 py-12">
+        <div className="max-w-3xl mx-auto text-center">
+          <h1 className="text-4xl font-bold mb-4">
+            Fastest AI-powered content engine<br />
+            <span className="text-blue-600">for Instagram & LinkedIn</span>
+          </h1>
+          <p className="text-lg text-gray-700 mb-8">
+            Build carousels, reels, captions & more in one click.
+          </p>
 
-      {/* FEATURES */}
-      <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Built on battle-tested tools</h2>
-          <p className="text-gray-600">
+          <div className="space-x-4 mb-12">
+            <Link href="/connect">
+              <span className="inline-block bg-black text-white py-3 px-6 rounded-md font-semibold hover:bg-gray-800 cursor-pointer">
+                Get Started
+              </span>
+            </Link>
+
+            <Link href="/connect">
+              <span className="inline-block bg-blue-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-blue-700 cursor-pointer">
+                Start your Free Trial
+              </span>
+            </Link>
+          </div>
+
+          <p className="text-gray-600 mb-4">Built on battle-tested tools</p>
+          <p className="text-sm text-gray-500 mb-8">
             Powered by Next.js, Tailwind, Canva API & n8n — made for speed, scale & full automation.
           </p>
-          <p className="text-gray-600">
-            Trusted by indie hackers, startups & growth teams.
-          </p>
-        </div>
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Built for creators, marketers & founders</h2>
-          <p className="text-gray-600">
-            Skip the grind. Generate carousels, reels, captions & posts in seconds — from trending news or your own ideas.
-          </p>
-        </div>
-      </section>
 
-      {/* FEATURES GRID */}
-      <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-        <div>
-          <h3 className="text-xl font-semibold">Turn news links into carousels</h3>
-          <p className="text-gray-600">
-            Paste any news link. Get a polished, 7-slide Instagram or LinkedIn carousel — fully editable in Canva.
+          <p className="text-gray-700">
+            Trusted by indie hackers, startups & growth teams.<br />
+            Built for creators, marketers & founders.
           </p>
         </div>
-        <div>
-          <h3 className="text-xl font-semibold">Auto-post to Instagram & LinkedIn</h3>
-          <p className="text-gray-600">
-            Schedule or auto-publish your carousels with captions directly to your socials, without leaving the dashboard.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold">Use your own Canva template</h3>
-          <p className="text-gray-600">
-            No boring AI designs. Bring your own Canva brand template and our engine fills it perfectly.
-          </p>
-        </div>
-      </section>
+      </main>
 
-      {/* CTA */}
-      <section className="text-center space-y-4">
-        <p className="text-gray-700 text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-        <button
-          id="trialBtn"
-          className="inline-block bg-blue-600 text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-blue-700"
-        >
-          Start your Free Trial
-        </button>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="border-t pt-8 text-center text-sm text-gray-500 space-y-2">
-        <p>© {new Date().getFullYear()} 10xSpeed. All rights reserved.</p>
-        <nav className="space-x-4">
-          <Link href="#">Home</Link>
-          <Link href="#">About</Link>
-          <Link href="#">Sign in</Link>
-          <Link href="#">GitHub</Link>
-        </nav>
+      <footer className="text-center text-sm text-gray-500 mt-20">
+        © 2025 10xSpeed. All rights reserved.
       </footer>
-    </main>
-  );
+    </>
+  )
 }
