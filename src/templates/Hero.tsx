@@ -26,7 +26,8 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'Fastest AI-powered content engine\n'}
+            Fastest AI-powered content engine
+            <br />
             <span className="text-primary-500">
               for Instagram & LinkedIn
             </span>
@@ -44,3 +45,4 @@ const Hero = () => (
 );
 
 export { Hero };
+
