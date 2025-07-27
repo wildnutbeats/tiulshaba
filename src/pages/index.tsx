@@ -1,6 +1,13 @@
 import Link from 'next/link';
 
 export default function Home() {
+  const scrollToForm = () => {
+    const formSection = document.getElementById("carouselForm");
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="bg-white text-gray-900 px-6 md:px-12 py-16 space-y-16">
       {/* HERO */}
@@ -13,12 +20,12 @@ export default function Home() {
         <p className="text-xl md:text-2xl text-gray-600">
           Build carousels, reels, captions & more in one click.
         </p>
-        <Link
-          href={`https://www.canva.com/apps/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CANVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_CANVA_REDIRECT_URI}`}
+        <button
+          onClick={scrollToForm}
           className="inline-block bg-black text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-gray-800"
         >
           Get Started
-        </Link>
+        </button>
       </section>
 
       {/* GOOGLE NEWS LINK FORM */}
@@ -32,7 +39,10 @@ export default function Home() {
             style={{ padding: "10px", width: "300px" }}
             required
           />
-          <button type="submit" style={{ padding: "10px 20px", marginLeft: "10px" }}>
+          <button
+            type="submit"
+            style={{ padding: "10px 20px", marginLeft: "10px" }}
+          >
             Generate Carousel
           </button>
         </form>
@@ -44,16 +54,20 @@ export default function Home() {
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">Built on battle-tested tools</h2>
           <p className="text-gray-600">
-            Powered by Next.js, Tailwind, Canva API & n8n — made for speed, scale & full automation.
+            Powered by Next.js, Tailwind, Canva API & n8n — made for speed,
+            scale & full automation.
           </p>
           <p className="text-gray-600">
             Trusted by indie hackers, startups & growth teams.
           </p>
         </div>
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold">Built for creators, marketers & founders</h2>
+          <h2 className="text-2xl font-bold">
+            Built for creators, marketers & founders
+          </h2>
           <p className="text-gray-600">
-            Skip the grind. Generate carousels, reels, captions & posts in seconds — from trending news or your own ideas.
+            Skip the grind. Generate carousels, reels, captions & posts in
+            seconds — from trending news or your own ideas.
           </p>
         </div>
       </section>
@@ -61,21 +75,28 @@ export default function Home() {
       {/* FEATURES GRID */}
       <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         <div>
-          <h3 className="text-xl font-semibold">Turn news links into carousels</h3>
+          <h3 className="text-xl font-semibold">
+            Turn news links into carousels
+          </h3>
           <p className="text-gray-600">
-            Paste any news link. Get a polished, 7-slide Instagram or LinkedIn carousel — fully editable in Canva.
+            Paste any news link. Get a polished, 7-slide Instagram or LinkedIn
+            carousel — fully editable in Canva.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-semibold">Auto-post to Instagram & LinkedIn</h3>
+          <h3 className="text-xl font-semibold">
+            Auto-post to Instagram & LinkedIn
+          </h3>
           <p className="text-gray-600">
-            Schedule or auto-publish your carousels with captions directly to your socials, without leaving the dashboard.
+            Schedule or auto-publish your carousels with captions directly to
+            your socials, without leaving the dashboard.
           </p>
         </div>
         <div>
           <h3 className="text-xl font-semibold">Use your own Canva template</h3>
           <p className="text-gray-600">
-            No boring AI designs. Bring your own Canva brand template and our engine fills it perfectly.
+            No boring AI designs. Bring your own Canva brand template and our
+            engine fills it perfectly.
           </p>
         </div>
       </section>
@@ -85,12 +106,12 @@ export default function Home() {
         <p className="text-gray-700 text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
-        <Link
-          href={`https://www.canva.com/apps/oauth2/authorize?client_id=${process.env.NEXT_PUBLIC_CANVA_CLIENT_ID}&response_type=code&redirect_uri=${process.env.NEXT_PUBLIC_CANVA_REDIRECT_URI}`}
+        <button
+          onClick={scrollToForm}
           className="inline-block bg-blue-600 text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-blue-700"
         >
           Start your Free Trial
-        </Link>
+        </button>
       </section>
 
       {/* FOOTER */}
