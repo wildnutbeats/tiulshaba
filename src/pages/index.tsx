@@ -14,7 +14,7 @@ export default function Home() {
           Build carousels, reels, captions & more in one click.
         </p>
         <Link
-          href="#"
+          href="https://10xspeed.in/rest/oauth2-credential/callback"
           className="inline-block bg-black text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-gray-800"
         >
           Get Started
@@ -68,7 +68,7 @@ export default function Home() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <Link
-          href="#"
+          href="https://10xspeed.in/rest/oauth2-credential/callback"
           className="inline-block bg-blue-600 text-white py-3 px-6 text-lg rounded-md font-semibold hover:bg-blue-700"
         >
           Start your Free Trial
